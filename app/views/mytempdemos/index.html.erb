@@ -1,0 +1,29 @@
+<h1>Listing mytempdemos</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mytempdemos.each do |mytempdemo| %>
+      <tr>
+        <td><%= mytempdemo.name %></td>
+        <td><%= mytempdemo.content %></td>
+        <td><%= link_to 'Show', mytempdemo %></td>
+        <td><%= link_to 'Edit', edit_mytempdemo_path(mytempdemo) %></td>
+        <td><%= link_to 'Destroy', mytempdemo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mytempdemo', new_mytempdemo_path %>

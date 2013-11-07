@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @mytempdemo.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @mytempdemo.content %>
+</p>
+
+<%= link_to 'Edit', edit_mytempdemo_path(@mytempdemo) %> |
+<%= link_to 'Back', mytempdemos_path %>
