@@ -6,8 +6,12 @@ Reservester::Application.routes.draw do
   resources :mytempdemos
 
   resources :restaurants
+
   # post GET /restaurants/:id(.:format) restaurants#show
   get 'restaurants/:id(.:format)' => 'restaurants#show'
+
+  # posts GET    /posts(.:format)          posts#index
+  get 'restaurants(.:format)' => 'restaurants#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
