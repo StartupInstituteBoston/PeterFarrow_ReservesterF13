@@ -13,6 +13,9 @@ Reservester::Application.routes.draw do
   # posts GET    /posts(.:format)          posts#index
   get 'restaurants(.:format)' => 'restaurants#index'
 
+  # DELETE /posts/:id(.:format)      posts#destroy
+  # delete 'restaurants/:id(.:format)' => 'restaurants#destroy' 
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
