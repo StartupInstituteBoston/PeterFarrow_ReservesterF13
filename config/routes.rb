@@ -1,14 +1,19 @@
 Reservester::Application.routes.draw do
 
   get "welcome/index"
+  root 'welcome#index'
+
+  resources :mytempdemos
+
+  resources :restaurants
+  # post GET /restaurants/:id(.:format) restaurants#show
+  get 'restaurants/:id(.:format)' => 'restaurants#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
   # root 'welcome#index'
-
-  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
@@ -18,8 +23,6 @@ Reservester::Application.routes.draw do
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
-  resources :mytempdemos
-  resources :restaurants
 
   # Example resource route with options:
   #   resources :products do
