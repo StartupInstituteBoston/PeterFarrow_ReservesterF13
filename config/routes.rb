@@ -1,7 +1,7 @@
 Reservester::Application.routes.draw do
 
   get "welcome/index"
-  root 'welcome#index'
+  root 'restaurants#index'
 
   resources :mytempdemos
 
