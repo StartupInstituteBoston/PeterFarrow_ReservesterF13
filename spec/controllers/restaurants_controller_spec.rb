@@ -16,15 +16,16 @@ describe RestaurantsController do
       response.should render_template("index")
     end
 
-    it "show's restaurant" do
-      get :index
-      assigns(:restaurant).should include(restaurant1)     
-    end
-    it "renders the restaurant" do
-      get :index
-        
-      # response.body.should include(restaurant1.description)
-    end  
+#    it "show's restaurant" do
+#      get :index
+#      assigns(:restaurant).should include(restaurant1)     
+#    end
+
+#    it "renders the restaurant" do
+#      get :index
+#        
+#      response.body.should include(restaurant1.description)
+#    end  
 
   end
 end
