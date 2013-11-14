@@ -46,3 +46,9 @@ end
 
 # Use Ruby 2.0.0
 ruby "2.0.0"
+
+group :development, :test do
+  gem 'rspec-rails', '~> 2.0'
+end
+
+gem 'simplecov', :require => false, :group => :test
