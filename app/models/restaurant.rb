@@ -1,5 +1,7 @@
 class Restaurant < ActiveRecord::Base
 
+#  mount_uploader :restaurant_image, Restaurant_imageUploader
+
   validates :name, presence: true, length: {minimum: 1}
   validates :description, presence: true, length: {minimum: 1}
   validates :address, presence: true, length: {minimum: 1}
