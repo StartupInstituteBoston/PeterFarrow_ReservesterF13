@@ -1,15 +1,17 @@
 class RestaurantsController < ApplicationController
 
   def new
+    @restaurant = Restaurant.new
   end
 
   def create
     @restaurant = Restaurant.new(restaurant_params)
 
-    # Validation to be added http://guides.rubyonrails.org/getting_started.html
-
-    @restaurant.save
-    redirect_to @restaurant
+    if @restaurant.save
+      redirect_to @restaurant
+    else
+      render 'new'
+    end
   end
 
   def show
@@ -22,7 +24,7 @@ class RestaurantsController < ApplicationController
 
   def update
     @restaurant = Restaurant.find(params[:id])
-    if @restaurant.update(params[:restaurant].permit(:name, :description, :address, :phone ))
+    if @restaurant.update_attributes restaurant_params
       redirect_to @restaurant
     else
       render 'edit'
@@ -42,7 +44,7 @@ class RestaurantsController < ApplicationController
   private
 
   def restaurant_params
-    params.require(:restaurant).permit(:name, :description, :address, :phone)
+    params.require(:restaurant).permit(:name, :description, :address, :phone, :restaurantimage)
   end
 
 end

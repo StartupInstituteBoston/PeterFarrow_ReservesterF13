@@ -16,7 +16,13 @@
   <strong>Address</strong>
   <%= @restaurant.address %>
 </p>
+
 <p>
   <strong>Phone</strong>
   <%= @restaurant.phone %>
+</p>
+
+<p>
+  <strong>Image</strong>
+  <%= image_tag @restaurant.restaurantimage_url.to_s %>
 </p>
