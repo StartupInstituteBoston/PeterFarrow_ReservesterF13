@@ -2,7 +2,7 @@ Reservester::Application.routes.draw do
 
   resources :example_twos
 
-  get "welcome/index"
+  get "about/index"
   root 'restaurants#index'
 
   resources :mytempdemos
