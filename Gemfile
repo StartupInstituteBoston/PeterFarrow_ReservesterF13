@@ -55,6 +55,7 @@ gem 'simplecov', :require => false, :group => :test
 
 gem 'bootstrap-sass', '~> 3.0.2.0'
 
+gem 'rmagick'
 gem 'carrierwave'
 
 gem 'dotenv-rails', :groups => [:development, :test]

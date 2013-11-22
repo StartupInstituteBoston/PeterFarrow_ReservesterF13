@@ -1,6 +1,4 @@
-<%= form_for @restaurant, html: {:multipart => true} do |f| %>
-
- <!-- form_for :restaurant, url: restaurants_path do |f| -->
+<%= form_for(@restaurant, html: {:multipart => true}) do |f| %>
 
   <% if @restaurant.errors.any? %>
     <div id="error_explanation">
@@ -41,7 +39,7 @@
     <%= f.file_field :restaurantimage %>
     <br />
     <%= f.label 'Current Image' %>
-    <%= image_tag @restaurant.restaurantimage_url.to_s %>
+    <%= image_tag @restaurant.restaurantimage_url(:masthead).to_s %>
   </p>
   <p>
     <%= f.submit %>

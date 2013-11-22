@@ -6,6 +6,7 @@
 
 <table>
   <tr>
+    <th></th>
     <th>Name</th>
     <th>Description</th>
     <th></th>
@@ -13,6 +14,7 @@
   </tr>
 <% @restaurant.each do |restaurant| %>
   <tr>
+    <td><%= image_tag restaurant.restaurantimage_url(:thumbnail).to_s %></td>
     <td><%= restaurant.name %></td>
     <td><%= restaurant.description %></td>
     <td><%= link_to 'Show', restaurant %></td>

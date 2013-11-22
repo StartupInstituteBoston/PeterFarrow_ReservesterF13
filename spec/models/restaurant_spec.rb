@@ -2,7 +2,7 @@ require "spec_helper"
 
 describe Restaurant do
 
-  subject {Restaurant.new(name: 'Bobs', description: 'bar and grill', address: '29 Mary St', phone: '555-555-5555')}
+  subject {Restaurant.new(name: 'Bobs', description: 'bar and grill', address: '29 Mary St', phone: '555-555-5555', restaurantimage: 'test.png')}
 
   describe "Name validation" do
     it "Can not be empty" do
@@ -35,5 +35,13 @@ describe Restaurant do
       subject.phone = "555-555-5555"
     end
   end
+
+  describe "Picture validation" do
+    it "Can not be empty" do
+      subject.restaurantimage = ""
+      expect(subject.valid?).to be_false
+      subject.phone = "test.png"
+    end 
+  end 
 
 end

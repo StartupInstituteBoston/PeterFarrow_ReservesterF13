@@ -1,6 +1,6 @@
 class RestaurantsController < ApplicationController
 
-  def new
+  def new()
     @restaurant = Restaurant.new
   end
 
